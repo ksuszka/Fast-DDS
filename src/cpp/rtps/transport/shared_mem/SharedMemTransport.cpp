@@ -137,6 +137,8 @@ bool SharedMemTransport::OpenInputChannel(
         {
             auto channel_resource = CreateInputChannelResource(locator, maxMsgSize, receiver);
             input_channels_.push_back(channel_resource);
+            EPROSIMA_LOG_WARNING(RTPS_MSG_OUT, std::string("CreateInputChannelResource succeeded for port ")
+                    << locator.port);
         }
         catch (std::exception& e)
         {

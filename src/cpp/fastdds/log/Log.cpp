@@ -40,7 +40,7 @@ struct LogResources
         , current_loop_(0)
         , filenames_(false)
         , functions_(true)
-        , verbosity_(Log::Error)
+        , verbosity_(Log::Warning)
     {
 #if STDOUTERR_LOG_CONSUMER
         consumers_.emplace_back(new StdoutErrConsumer);
@@ -138,7 +138,7 @@ struct LogResources
         error_string_filter_.reset();
         filenames_ = false;
         functions_ = true;
-        verbosity_ = Log::Error;
+        verbosity_ = Log::Warning;
         consumers_.clear();
 
 #if STDOUTERR_LOG_CONSUMER
