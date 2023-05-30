@@ -142,7 +142,7 @@ bool SharedMemTransport::OpenInputChannel(
         {
             (void)e;
 
-            EPROSIMA_LOG_INFO(RTPS_MSG_OUT, std::string("CreateInputChannelResource failed for port ")
+            EPROSIMA_LOG_ERROR(RTPS_MSG_OUT, std::string("CreateInputChannelResource failed for port ")
                     << locator.port << " msg: " << e.what());
             return false;
         }
